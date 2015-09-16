@@ -1,0 +1,31 @@
+<sdf version = "1.4">
+<model name = "scaffold">
+    <static>1</static>
+	<link name="scaffold_1">
+		<pose>0 0 0 0 0 0</pose>
+		<visual name='torus'>
+			<pose>0 0 2 1.57 0 0</pose>
+			<geometry>
+				<mesh>
+					<scale>0.02 0.02 0.02</scale>
+					<uri>model://simbicon_ros/meshes/scaffold/torus.stl</uri>
+				</mesh>
+			</geometry>
+			<material>
+			  <script>
+				<name>Gazebo/Yellow</name>
+			  </script>
+			</material>
+		</visual>
+		<collision name='torus_collision'>
+			<pose>0 0 2 1.57 0 0</pose>
+			<geometry>
+				<mesh>
+					<scale>0.02 0.02 0.02</scale>
+					<uri>model://simbicon_ros/meshes/scaffold/torus.stl</uri>
+				</mesh>
+			</geometry>
+		</collision>
+	</link>
+</model>
+</sdf>

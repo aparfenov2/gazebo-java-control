@@ -1,0 +1,883 @@
+<sdf version = "1.4">
+<model name = "bipe2">
+    <static>0</static>
+<link name="pelvis">
+	<pose>0.000 1.035 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>12.9</mass>
+		<inertia>
+			<ixx>0.0705</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.11</iyy>
+			<iyz>0</iyz>
+			<izz>0.13</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='pelvis_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/pelvis_2_b.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+	<visual name='pelvis_visual_2'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/pelvis_2_s.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='pelvis_collision'>
+		<pose>0 -0.075 0 0 0 0</pose>
+		<geometry>
+			<sphere>
+				<radius>0.12</radius>
+			</sphere>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="torso">
+	<pose>0.000 1.435 -0.025 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>22.5</mass>
+		<inertia>
+			<ixx>0.34</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.21</iyy>
+			<iyz>0</iyz>
+			<izz>0.46</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='torso_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/torso_2_b.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+	<visual name='torso_visual_2'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/torso_2_s_v2.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='torso_collision'>
+		<pose>0 0 0.01 0 0 0</pose>
+		<geometry>
+			<sphere>
+				<radius>0.11</radius>
+			</sphere>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="head">
+	<pose>0.000 1.695 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>5.2</mass>
+		<inertia>
+			<ixx>0.04</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.02</iyy>
+			<iyz>0</iyz>
+			<izz>0.042</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='head_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/head_s.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+	</visual>
+	<visual name='head_visual_2'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/head_b.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='head_collision'>
+		<pose>0 0.04 0 0 0 0</pose>
+		<geometry>
+			<sphere>
+				<radius>0.11</radius>
+			</sphere>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lUpperarm">
+	<pose>0.370 1.505 -0.005 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>2.2</mass>
+		<inertia>
+			<ixx>0.005</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.02</iyy>
+			<iyz>0</iyz>
+			<izz>0.02</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lUpperarm_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/lupperarm.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lUpperarm_collision'>
+		<pose>0 0 0 0 1.57 0</pose>
+		<geometry>
+			<cylinder>
+				<length>0.3</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lLowerarm">
+	<pose>0.760 1.505 0.001 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>1.7</mass>
+		<inertia>
+			<ixx>0.0024</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.025</iyy>
+			<iyz>0</iyz>
+			<izz>0.025</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lLowerarm_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/llowerarm.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lLowerarm_collision'>
+		<pose>0 0 0 0 1.57 0</pose>
+		<geometry>
+			<cylinder>
+				<length>0.3</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rUpperarm">
+	<pose>-0.370 1.505 -0.005 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>2.2</mass>
+		<inertia>
+			<ixx>0.005</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.02</iyy>
+			<iyz>0</iyz>
+			<izz>0.02</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rUpperarm_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rupperarm.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rUpperarm_collision'>
+		<pose>0 0 0 0 1.57 0</pose>
+		<geometry>
+			<cylinder>
+				<length>0.3</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rLowerarm">
+	<pose>-0.760 1.505 0.001 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>1.7</mass>
+		<inertia>
+			<ixx>0.0024</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.025</iyy>
+			<iyz>0</iyz>
+			<izz>0.025</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rLowerarm_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rlowerarm.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rLowerarm_collision'>
+		<pose>0 0 0 0 1.57 0</pose>
+		<geometry>
+			<cylinder>
+				<length>0.3</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lUpperleg">
+	<pose>0.100 0.775 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>6.6</mass>
+		<inertia>
+			<ixx>0.15</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.022</iyy>
+			<iyz>0</iyz>
+			<izz>0.15</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lUpperleg_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/lupperleg.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lUpperleg_collision'>
+		<pose>0 -0.07 0 1.57 0 0</pose>
+		<geometry>
+			<cylinder>
+				<length>-0.38</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lLowerleg">
+	<pose>0.100 0.305 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>3.2</mass>
+		<inertia>
+			<ixx>0.055</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.007</iyy>
+			<iyz>0</iyz>
+			<izz>0.055</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lLowerleg_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/llowerleg.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lLowerleg_collision'>
+		<pose>0 -0.04 0.0 1.57 0 0</pose>
+		<geometry>
+			<cylinder>
+				<length>-0.32</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rUpperleg">
+	<pose>-0.100 0.775 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>6.6</mass>
+		<inertia>
+			<ixx>0.15</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.022</iyy>
+			<iyz>0</iyz>
+			<izz>0.15</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rUpperleg_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rupperleg.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rUpperleg_collision'>
+		<pose>0 -0.07 0 1.57 0 0</pose>
+		<geometry>
+			<cylinder>
+				<length>-0.38</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rLowerleg">
+	<pose>-0.100 0.305 0.000 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>3.2</mass>
+		<inertia>
+			<ixx>0.055</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.007</iyy>
+			<iyz>0</iyz>
+			<izz>0.055</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rLowerleg_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rlowerleg.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rLowerleg_collision'>
+		<pose>0 -0.04 0 1.57 0 0</pose>
+		<geometry>
+			<cylinder>
+				<length>-0.32</length>
+				<radius>0.05</radius>
+			</cylinder>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lFoot">
+	<pose>0.100 0.035 0.050 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>1.00</mass>
+		<inertia>
+			<ixx>0.007</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.008</iyy>
+			<iyz>0</iyz>
+			<izz>0.002</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lFoot_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/lfoot.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lFoot_collision'>
+		<pose>-0.025 -0.033 -0.09 0 0 0</pose>
+		<geometry>
+			<box>
+				<size>0.025 0.005 0.055</size>
+			</box>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rFoot">
+	<pose>-0.100 0.035 0.050 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>1</mass>
+		<inertia>
+			<ixx>0.007</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.008</iyy>
+			<iyz>0</iyz>
+			<izz>0.002</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rFoot_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rfoot.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rFoot_collision'>
+		<pose>-0.025 -0.033 -0.09 0 0 0</pose>
+		<geometry>
+			<box>
+				<size>0.025 0.005 0.055</size>
+			</box>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="lToes">
+	<pose>0.100 0.015 0.125 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>0.2</mass>
+		<inertia>
+			<ixx>0.002</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.002</iyy>
+			<iyz>0</iyz>
+			<izz>0.0005</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='lToes_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/ltoes.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='lToes_collision'>
+		<pose>0.0 -0.005 0.025 0 0 0</pose>
+		<geometry>
+			<sphere>
+				<radius>0.01</radius>
+			</sphere>
+		</geometry>
+	</collision>
+</link>
+  
+<link name="rToes">
+	<pose>-0.100 0.015 0.125 0 0 0</pose>
+	<inertial>
+		<pose>0 0 0 0 0 0</pose>
+		<mass>0.2</mass>
+		<inertia>
+			<ixx>0.002</ixx>
+			<ixy>0</ixy>
+			<ixz>0</ixz>
+			<iyy>0.002</iyy>
+			<iyz>0</iyz>
+			<izz>0.0005</izz>
+		</inertia>
+	</inertial>
+
+	<visual name='rToes_visual_1'>
+		<pose>0 0 0 0 0 0</pose>
+		<geometry>
+			<mesh>
+				<scale>1 1 1</scale>
+				<uri>model://simbicon_ros/meshes/rtoes.stl</uri>
+			</mesh>
+		</geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+	</visual>
+
+	<collision name='rToes_collision'>
+		<pose>0.0 -0.005 0.025 0 0 0</pose>
+		<geometry>
+			<sphere>
+				<radius>0.01</radius>
+			</sphere>
+		</geometry>
+	</collision>
+</link>
+  
+ 
+
+ 
+<joint name='pelvis_torso' type='ball'>
+	<child>torso</child>
+	<parent>pelvis</parent>
+	<pose>0 -0.23 -0.01 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.6</lower>
+			<upper>0.6</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='torso_head' type='ball'>
+	<child>head</child>
+	<parent>torso</parent>
+	<pose>0 -0.16 -0.025 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.6</lower>
+			<upper>0.6</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lShoulder' type='ball'>
+	<child>lUpperarm</child>
+	<parent>torso</parent>
+	<pose>-0.17 0 0 0 0 0</pose>
+	<axis>
+		<xyz>0 0 1</xyz>
+		<limit>
+			<lower>-1.7</lower>
+			<upper>1.7</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rShoulder' type='ball'>
+	<child>rUpperarm</child>
+	<parent>torso</parent>
+	<pose>0.17 0 0 0 0 0</pose>
+	<axis>
+		<xyz>0 0 1</xyz>
+		<limit>
+			<lower>-1.7</lower>
+			<upper>1.7</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lElbow' type='revolute'>
+	<child>lLowerarm</child>
+	<parent>lUpperarm</parent>
+	<pose>-0.215 0 0 0 0 0</pose>
+	<axis>
+		<xyz>0 1 0</xyz>
+		<limit>
+			<lower>-2.7</lower>
+			<upper>0</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rElbow' type='revolute'>
+	<child>rLowerarm</child>
+	<parent>rUpperarm</parent>
+	<pose>0.215 0 0 0 0 0</pose>
+	<axis>
+		<xyz>0 -1 0</xyz>
+		<limit>
+			<lower>-2.7</lower>
+			<upper>0</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lHip' type='ball'>
+	<child>lUpperleg</child>
+	<parent>pelvis</parent>
+	<pose>0 0.21 0 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-1.3</lower>
+			<upper>1.9</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lKnee' type='revolute'>
+	<child>lLowerleg</child>
+	<parent>lUpperleg</parent>
+	<pose>0 0.21 0 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>0</lower>
+			<upper>2.5</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lAnkle' type='universal'>
+	<child>lFoot</child>
+	<parent>lLowerleg</parent>
+	<pose>0.0 0.02 -0.04 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.75</lower>
+			<upper>0.75</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='lToeJoint' type='revolute'>
+	<child>lToes</child>
+	<parent>lFoot</parent>
+	<pose>0 0 -0.025 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.52</lower>
+			<upper>0.02</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rHip' type='ball'>
+	<child>rUpperleg</child>
+	<parent>pelvis</parent>
+	<pose>0 0.21 0 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-1.3</lower>
+			<upper>1.9</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rKnee' type='revolute'>
+	<child>rLowerleg</child>
+	<parent>rUpperleg</parent>
+	<pose>0 0.21 0 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>0</lower>
+			<upper>2.5</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rAnkle' type='universal'>
+	<child>rFoot</child>
+	<parent>rLowerleg</parent>
+	<pose>0.0 0.02 -0.04 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.75</lower>
+			<upper>0.75</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+ 
+<joint name='rToeJoint' type='revolute'>
+	<child>rToes</child>
+	<parent>rFoot</parent>
+	<pose>0 0 -0.025 0 0 0</pose>
+	<axis>
+		<xyz>1 0 0</xyz>
+		<limit>
+			<lower>-0.52</lower>
+			<upper>0.02</upper>
+			<effort>1</effort>
+			<velocity>1</velocity>
+		</limit>
+		<dynamics/>
+	</axis>
+</joint>
+
+</model>
+</sdf>
+

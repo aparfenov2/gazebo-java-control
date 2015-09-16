@@ -1,0 +1,17 @@
+This is a tiny Java client for Gazebosim
+
+Reqirements
+--------------------
+Java 8, JavaFX, 
+Gazebo simulator running under Windows or Linux
+correct values in environment variables
+
+HOWTO
+Creating Eclipse Project
+-----------------------
+make an empty folder
+symlink src & lib to it
+copy pom.xml
+in Eclipse : click import Maven project, select th pom.xml
+add all libs from lib to classpath
+symlink symbicon_ros folder with robot model
